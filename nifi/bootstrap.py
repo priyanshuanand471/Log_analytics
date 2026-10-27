@@ -1,7 +1,3 @@
-"""Best-effort NiFi 1.x REST setup: TailFile -> PublishKafka_2_6.
-Run with docker compose --profile nifi run --rm nifi-setup.
-Inspect NiFi UI and configure any version-dependent properties manually.
-"""
 import time,requests
 BASE='http://nifi:8080/nifi-api'
 s=requests.Session()
