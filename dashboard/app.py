@@ -1,4 +1,3 @@
-"""Dash/Plotly UI for live micro-batch metrics and cold-path summaries."""
 import os
 from collections import defaultdict
 from cassandra.cluster import Cluster
