@@ -1,0 +1,13 @@
+OPEN THIS FOLDER IN VS CODE, THEN READ README.md.
+
+CORE:
+1. docker compose up -d kafka cassandra namenode datanode
+2. docker compose exec cassandra cqlsh -f /schema.cql
+3. docker compose exec namenode hdfs dfs -mkdir -p /data/logs /checkpoints
+4. docker compose exec namenode hdfs dfs -chmod -R 777 /data /checkpoints
+5. docker compose up -d --build spark-stream dashboard
+6. docker compose --profile demo up -d --build producer
+7. Open http://localhost:8050
+8. Run cold batch as described in README.md.
+
+OPTIONAL NiFi and Terraform steps: README.md
